@@ -1,6 +1,6 @@
 # whisper-stt-gradio
 
-Gradio Interface for Transcription and Translation using the Whisper Large V3 model for Sentence-To-Text (STT) tasks. It has support for many languages, including Romanian, and offers pretty great accuracy.
+Gradio Interface for Transcription and Translation using the Whisper Large V3 model for Speech-To-Text (STT) tasks. It has support for many languages, including Romanian, and offers pretty great accuracy.
 
 ## Setup
 
@@ -51,7 +51,6 @@ docker-compose up -d
 
 #when stopping the container
 #docker-compose down
-
 ```
 
 Remember you can always remove the `-d` flag for debugging purposes.
