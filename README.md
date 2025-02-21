@@ -17,7 +17,25 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Now you can open the browser and go to `http://0.0.0.0:7860/` to see the Gradio Interface with Whisper STT available to use, you can also look at the API specification for it. `Ctrl + C` to stop the server.
+Now you can open the browser and go to `http://0.0.0.0:7860/` to see the Gradio Interface with Whisper STT available to use, you can also look at the API specification for it. `Ctrl + C` to stop the server. A simple API example is found under `./test_api` in JavaScript and in Python, you will need `npm` and `node`.
+
+```bash
+cd test_api
+
+npm install
+
+node test_whisper_stt.js
+```
+
+or for the Python example:
+
+```bash
+cd test_api
+
+pip install -r requirements.txt
+
+python test_whisper_stt.py
+```
 
 ## Docker
 
@@ -50,10 +68,10 @@ docker run -d --gpus all -p 7860:7860 --name whisper-stt-gradio whisper-stt-grad
 Or use docker-compose:
 
 ```bash
-# to start a container
+#to start a container
 docker-compose up
 
-# start as a daemon
+#start as a daemon
 #docker-compose up -d
 
 #when stopping the container
