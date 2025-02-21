@@ -37,4 +37,4 @@ demo = gr.Interface(
     clear_btn=None,
 )
 
-demo.launch(server_name="0.0.0.0")
+demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
