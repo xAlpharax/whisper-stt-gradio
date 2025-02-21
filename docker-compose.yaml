@@ -4,9 +4,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "7860:7860"
+      - "${PORT:-7860}:${PORT:-7860}"  #  Use environment variable, fallback to 7860
     environment:
-      PORT: "7860"
+      PORT: "${PORT:-7860}"  #  Set the PORT environment variable inside the container
     restart: unless-stopped
     deploy:
       resources:

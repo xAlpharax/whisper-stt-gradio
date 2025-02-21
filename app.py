@@ -37,4 +37,13 @@ demo = gr.Interface(
     clear_btn=None,
 )
 
-demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file (if it exists)
+load_dotenv()
+
+# Get the port from the environment variable, default to 7860
+port = int(os.environ.get("PORT", 7860))
+
+demo.launch(server_name="0.0.0.0", server_port=port, share=False)

@@ -42,18 +42,27 @@ docker run -d --gpus all -p 7860:7860 --name whisper-stt-gradio whisper-stt-grad
 
 #when removing the image
 #docker rmi whisper-stt-gradio
+
+#to remove everything related to docker (sometimes needed, quick reference)
+#docker system prune -a --volumes --force
 ```
 
 Or use docker-compose:
 
 ```bash
-docker-compose up -d
+# to start a container
+docker-compose up
+
+# start as a daemon
+#docker-compose up -d
 
 #when stopping the container
 #docker-compose down
 ```
 
 Remember you can always remove the `-d` flag for debugging purposes.
+
+**You can modify the port the application is running on by setting the PORT environment variable in `.env`.**
 
 ## Contributing
 
